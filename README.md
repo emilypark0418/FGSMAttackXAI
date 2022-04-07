@@ -37,3 +37,7 @@ In this project, we perform three experiments.
   <img src="assets/fig5.png" />
   <img src="assets/fig6.png" />
 </p>
+
+## Conclusion
+
+In this project, we performed three experiments to re-evaluate PGD and FGSM attacks. In both attacks, the most sensitive parameter affecting the robust accuracy is ϵ. PGD attack has a linear relationship between the robustness accuracy and ϵ, while the performance of FGSM attack is more sensitive in smaller ϵs. Per-class accuracy for FGSM as ϵ increases provides us with some concerns regarding the method as the accuracy of one specific class increases from a lower ϵ to higher ϵ, while the accuracy of all other classes goes to near 0. Per-class accuracy for PGD from weak attack to strong attack decreases across all classes at a similar rate. For both attacks, the average dice loss and visual analysis of attention maps indicate that the visual explanation is robust. However, there exists a trade-off in using the two attacks as PGD takes much longer time to train and has more hyperparameters to tune, while FGSM is more simple, with only ϵ being the hyperparameter, but strong perturbations in FGSM are more apparent.
